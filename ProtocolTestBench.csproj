@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- WPF 桌面程序，输出 exe 而不是类库。 -->
+    <OutputType>WinExe</OutputType>
+
+    <!-- 目标 .NET 8 Windows 桌面运行时；WPF 项目必须带 -windows 后缀。 -->
+    <TargetFramework>net8.0-windows</TargetFramework>
+
+    <!-- 启用可空引用类型检查，减少空对象导致的运行时异常。 -->
+    <Nullable>enable</Nullable>
+
+    <!-- 使用 SDK 隐式 using，减少每个 C# 文件重复引用基础命名空间。 -->
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <!-- 启用 WPF 编译目标，让 XAML 能生成对应的 partial class。 -->
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Resources\app.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- IPC CFX 官方 SDK：提供 CFXEnvelope、标准消息类型和 AMQP 1.0 传输端点。 -->
+    <PackageReference Include="CFX.CFXSDK" Version="2.1.1" />
+
+    <!-- MQTTnet：用于 MQTT broker 的连接、订阅、发布和消息接收。 -->
+    <PackageReference Include="MQTTnet" Version="5.1.0.1559" />
+
+    <!-- Stomp.Net：用于 STOMP over TCP/SSL 的连接、订阅、发送和消息接收。 -->
+    <PackageReference Include="Stomp.Net" Version="2.4.0" />
+  </ItemGroup>
+
+</Project>

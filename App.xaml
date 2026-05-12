@@ -1,0 +1,17 @@
+﻿<Application x:Class="ProtocolTestBench.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ProtocolTestBench"
+             StartupUri="MainWindow.xaml">
+    <!--
+        应用级资源入口。
+        Styles.xaml 放统一样式，界面 XAML 只保留布局和控件结构。
+    -->
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
