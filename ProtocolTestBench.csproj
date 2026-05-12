@@ -7,11 +7,14 @@
     <!-- 目标 .NET 8 Windows 桌面运行时；WPF 项目必须带 -windows 后缀。 -->
     <TargetFramework>net8.0-windows</TargetFramework>
 
-    <!-- 启用可空引用类型检查，减少空对象导致的运行时异常。 -->
-    <Nullable>enable</Nullable>
+    <!-- 固定为 C# 7.3，便于旧环境编译。 -->
+    <LangVersion>7.3</LangVersion>
 
-    <!-- 使用 SDK 隐式 using，减少每个 C# 文件重复引用基础命名空间。 -->
-    <ImplicitUsings>enable</ImplicitUsings>
+    <!-- C# 7.3 不支持可空引用类型语法。 -->
+    <Nullable>disable</Nullable>
+
+    <!-- C# 7.3 不支持 SDK 生成的 global using。 -->
+    <ImplicitUsings>false</ImplicitUsings>
 
     <!-- 启用 WPF 编译目标，让 XAML 能生成对应的 partial class。 -->
     <UseWPF>true</UseWPF>
